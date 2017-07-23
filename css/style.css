@@ -1,0 +1,65 @@
+.navbar {
+		border-radius: 0;
+}
+.header {
+		text-align: center;
+}
+.header-books{
+/*		text-align: right;
+		padding: 7px 20px;
+		font-weight: bold;
+		font-size: 16px;*/
+
+    font-size: 74px;
+    line-height: .97341;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    margin-bottom: 100px;
+
+}
+.big-image{
+	margin: auto;
+}
+.sub-header {
+	font-size: 22px;
+	    line-height: 1.45455;
+	    font-weight: 400;
+	    letter-spacing: .016em;
+	    font-family: "Open Sans";
+	    margin-bottom: 25px;
+}
+.books-content {
+	margin-top: 20px;
+	padding-top: 102px;
+	padding-bottom: 115px;
+	opacity: 0;
+	background-color: #fafafa;
+	-webkit-transition: opacity 2s; 
+		transition: opacity 2s;
+}
+.extra-margin {
+	margin-left: 80px;
+}
+.already-visible {
+		opacity: 1;
+}
+
+.books-content [class^="col-"] {
+		padding: 15px 0;
+}
+/*Onload animation*/
+.come-in {
+	transform: translateY(150px);
+	animation: come-in 1.8s ease forwards;
+
+	opacity: 1;
+
+}
+/*.come-in:nth-child(odd) {
+	animation-duration: 2.6s;
+}*/
+
+@keyframes come-in {
+	to { transform: translateY(0); }
+}
