@@ -17,9 +17,19 @@
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     margin-bottom: 100px;
 
+    /*Animation*/
+    opacity: 0;
+
+    transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 }
 .big-image{
 	margin: auto;
+
+	/*animation*/
+
+	opacity: 0;
+
+	transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.45s;
 }
 .sub-header {
 	font-size: 22px;
@@ -28,37 +38,102 @@
 	    letter-spacing: .016em;
 	    font-family: "Open Sans";
 	    margin-bottom: 25px;
+
+	/*animation*/
+
+	opacity: 0;
+
+	transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+
+
 }
 .books-content {
 	margin-top: 20px;
 	padding-top: 102px;
 	padding-bottom: 115px;
-	opacity: 0;
+	opacity: 0.4;
 	background-color: #fafafa;
-	-webkit-transition: opacity 2s; 
-		transition: opacity 2s;
+		transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+
 }
 .extra-margin {
 	margin-left: 80px;
 }
-.already-visible {
+.already-visible, .already-visible .sub-header {
 		opacity: 1;
 }
 
 .books-content [class^="col-"] {
 		padding: 15px 0;
 }
+/*Custom Onload Animation*/
+.come-in .sub-header, .come-in .header-books, .come-in .big-image  {
+
+	opacity: 1;
+
+}
 /*Onload animation*/
 .come-in {
 	transform: translateY(150px);
-	animation: come-in 1.8s ease forwards;
-
+	animation: come-in 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+	
 	opacity: 1;
+
+}
+.come-in-text {
+	transform: translateY(150px);
+	animation: come-in 1.7s ease forwards;
+	animation-delay: 0.1s;
+}
+.come-in-sub-text {
+
+	transform: translateY(150px);
+	animation: come-in 1.7s ease forwards;
+
+	 animation-delay: 0.2s;
 
 }
 /*.come-in:nth-child(odd) {
 	animation-duration: 2.6s;
 }*/
+.already-visible .sub-header, .sub-header-animation {
+	/*transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;*/
+	transform: translateY(70px);
+    animation-name: come-in;
+    animation-duration: 1.2s;
+	animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    animation-fill-mode: forwards;
+	animation-delay: 0.0s;
+
+	/*opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;*/
+	opacity: 1;
+	/*animation-delay: 0.1s;*/
+}
+.already-visible .header-books, .header-books-animation {
+
+	transform: translateY(60px);
+	    animation-name: come-in;
+	    animation-duration: 1.2s;
+		animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+	    animation-fill-mode: forwards;
+		animation-delay: 0.2s;
+
+		/*opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;*/
+		opacity: 1;
+}
+
+.already-visible .big-image, .big-image-animation {
+
+	transform: translateY(60px);
+	    animation-name: come-in;
+	    animation-duration: 1.2s;
+		animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) 0.45s;
+	    animation-fill-mode: forwards;
+		animation-delay: 0.45s;
+
+		/*opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;*/
+		opacity: 1;
+}
 
 @keyframes come-in {
 	to { transform: translateY(0); }
